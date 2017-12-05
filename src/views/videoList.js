@@ -10,7 +10,7 @@ var VideoListView = Backbone.View.extend({
 
     let videoList = this.collection.map(this.renderVideo, this);
     this.$('.video-list').append(videoList);
-    return this;
+    return this.el;
   },
   
   renderVideo: function(video) {
