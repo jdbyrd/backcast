@@ -1,7 +1,7 @@
 var VideoListView = Backbone.View.extend({
 
   initialize: function() {
-    console.log('videlistview ran');
+    //console.log('videlistview ran');
     this.collection.on('sync', this.render, this);
   },
 
@@ -14,7 +14,7 @@ var VideoListView = Backbone.View.extend({
   
   renderVideo: function(video) {
     var videoListView = new VideoListEntryView({model: video});
-    //this.$el.append(videoListView.render());
+    this.$el.append(videoListView.render());
   },
 
   template: templateURL('src/templates/videoList.html')
